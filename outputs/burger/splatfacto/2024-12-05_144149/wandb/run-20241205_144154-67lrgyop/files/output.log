@@ -1,0 +1,45 @@
+[1;33mlogging events to: outputs/burger/splatfacto/[0m[1;33m2024[0m[1;33m-[0m[1;33m12[0m[1;33m-05_144149[0m
+Traceback [1m([0mmost recent call last[1m)[0m:
+  File [32m"/home/samanta/miniconda3/envs/nerfstudio/lib/python3.8/site-packages/nerfstudio/scripts/train.py"[0m, line [1;36m189[0m, in
+launch
+    [1;35mmain_func[0m[1m([0m[33mlocal_rank[0m=[1;36m0[0m, [33mworld_size[0m=[35mworld_size[0m, [33mconfig[0m=[35mconfig[0m[1m)[0m
+  File [32m"/home/samanta/miniconda3/envs/nerfstudio/lib/python3.8/site-packages/nerfstudio/scripts/train.py"[0m, line [1;36m100[0m, in
+train_loop
+    [1;35mtrainer.train[0m[1m([0m[1m)[0m
+  File [32m"/home/samanta/miniconda3/envs/nerfstudio/lib/python3.8/site-packages/nerfstudio/engine/trainer.py"[0m, line [1;36m237[0m, in
+train
+    [1;35mself._init_viewer_state[0m[1m([0m[1m)[0m
+  File [32m"/home/samanta/miniconda3/envs/nerfstudio/lib/python3.8/site-packages/nerfstudio/utils/decorators.py"[0m, line [1;36m59[0m,
+in wrapper
+    ret = [1;35mfunc[0m[1m([0mself, *args, **kwargs[1m)[0m
+  File [32m"/home/samanta/miniconda3/envs/nerfstudio/lib/python3.8/site-packages/nerfstudio/engine/trainer.py"[0m, line [1;36m362[0m, in
+_init_viewer_state
+    [1;35mself.viewer_state.init_scene[0m[1m([0m
+  File [32m"/home/samanta/miniconda3/envs/nerfstudio/lib/python3.8/site-packages/nerfstudio/utils/decorators.py"[0m, line [1;36m83[0m,
+in wrapper
+    ret = [1;35mfunc[0m[1m([0m*args, **kwargs[1m)[0m
+  File [32m"/home/samanta/miniconda3/envs/nerfstudio/lib/python3.8/site-packages/nerfstudio/viewer/viewer.py"[0m, line [1;36m445[0m, in
+init_scene
+    image = train_dataset[1m[[0m[32m"image"[0m[1m][0m
+  File [32m"/home/samanta/miniconda3/envs/nerfstudio/lib/python3.8/site-packages/nerfstudio/data/datasets/base_dataset.py"[0m,
+line [1;36m152[0m, in __getitem__
+    data = [1;35mself.get_data[0m[1m([0mimage_idx[1m)[0m
+  File [32m"/home/samanta/miniconda3/envs/nerfstudio/lib/python3.8/site-packages/nerfstudio/data/datasets/base_dataset.py"[0m,
+line [1;36m121[0m, in get_data
+    image = [1;35mself.get_image_float32[0m[1m([0mimage_idx[1m)[0m
+  File [32m"/home/samanta/miniconda3/envs/nerfstudio/lib/python3.8/site-packages/nerfstudio/data/datasets/base_dataset.py"[0m,
+line [1;36m88[0m, in get_image_float32
+    image = [1;35mtorch.from_numpy[0m[1m([0m[1;35mself.get_numpy_image[0m[1m([0mimage_idx[1m)[0m[1;35m.astype[0m[1m([0m[32m"float32"[0m[1m)[0m [35m/[0m [1;36m255.0[0m[1m)[0m
+  File [32m"/home/samanta/miniconda3/envs/nerfstudio/lib/python3.8/site-packages/nerfstudio/data/datasets/base_dataset.py"[0m,
+line [1;36m74[0m, in get_numpy_image
+    image = [1;35mnp.array[0m[1m([0mpil_image, [33mdtype[0m=[32m"uint8"[0m[1m)[0m  # shape is [1m([0mh, w[1m)[0m or [1m([0mh, w, [1;36m3[0m or [1;36m4[0m[1m)[0m
+  File [32m"/home/samanta/miniconda3/envs/nerfstudio/lib/python3.8/site-packages/PIL/Image.py"[0m, line [1;36m742[0m, in
+__array_interface__
+    new[1m[[0m[32m"data"[0m[1m][0m = [1;35mself.tobytes[0m[1m([0m[1m)[0m
+  File [32m"/home/samanta/miniconda3/envs/nerfstudio/lib/python3.8/site-packages/PIL/Image.py"[0m, line [1;36m802[0m, in tobytes
+    [1;35mself.load[0m[1m([0m[1m)[0m
+  File [32m"/home/samanta/miniconda3/envs/nerfstudio/lib/python3.8/site-packages/PIL/ImageFile.py"[0m, line [1;36m293[0m, in load
+    n, err_code = [1;35mdecoder.decode[0m[1m([0mb[1m)[0m
+KeyboardInterrupt
+
+Printing profiling stats, from longest to shortest duration in seconds
